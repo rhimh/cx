@@ -111,7 +111,7 @@ while clock() - t0 <= n do end
 end
 function Dev(msg) 
 ok = false
-local list = {Sudo_Id,5353375722,5778701638,5298947457}
+local list = {Sudo_Id,5934060011}
 for k,v in pairs(list) do
 if tonumber(msg.sender_id.user_id) == tonumber(v) then
 ok = true
@@ -174,7 +174,7 @@ end
 if Redis:get(Fast.."chsource") then
 chsource = Redis:get(Fast.."chsource")
 else
-chsource = "SSSSMY"
+chsource = "Y_H_U_3"
 end
 function Reply_Status(UserId,TextMsg)
 local UserInfo = bot.getUser(UserId)
@@ -185,17 +185,17 @@ else
 UserInfousername = UserId
 end
 return {
-Lock     = '\n*⦁ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n⦁خاصيه المسح *',
-unLock   = '\n*⦁ بواسطه ← *'..UserInfousername..'\n'..TextMsg,
-lockKtm  = '\n*⦁ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n⦁خاصيه الكتم *',
-lockKid  = '\n*⦁ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n⦁خاصيه التقييد *',
-lockKick = '\n*⦁ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n⦁خاصيه الطرد *',
-Reply    = '\n*⦁ المستخدم ← *'..UserInfousername..'\n*'..Textdata..'*'
+Lock     = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n◍خاصيه المسح *',
+unLock   = '\n*◍ بواسطه ← *'..UserInfousername..'\n'..TextMsg,
+lockKtm  = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n◍خاصيه الكتم *',
+lockKid  = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n◍خاصيه التقييد *',
+lockKick = '\n*◍ بواسطه ← *'..UserInfousername..'\n*'..Textdata..'\n◍خاصيه الطرد *',
+Reply    = '\n*◍ المستخدم ← *'..UserInfousername..'\n*'..Textdata..'*'
 }
 end
 if Dev(msg) then
-if text == "تحديث" or text == "اعاده التشغيل ⦁" then
-bot.sendText(data.chat_id,0,"⦁ تمت اعاده تشغيل الملفات بنجاح ✅")
+if text == "تحديث" or text == "اعاده التشغيل ◍" then
+bot.sendText(data.chat_id,0,"◍ تمت اعاده تشغيل الملفات بنجاح /n√")
 dofile('Fast.lua')  
 return false 
 end
@@ -205,15 +205,15 @@ if Message_Get.forward_info then
 local Info_User = Redis:get(Fast.."Twasl:UserId"..Message_Get.forward_info.date) or 46899864
 if text == 'حظر' then
 Redis:sadd(Fast..'BaN:In:Tuasl',Info_User)  
-return send(data.chat_id,data.id,Reply_Status(Info_User,'⦁ تم حظره من الصانع').Reply,"md",true)  
+return send(data.chat_id,data.id,Reply_Status(Info_User,'◍ تم حظره من الصانع').Reply,"md",true)  
 end 
 if text =='الغاء الحظر' or text =='الغاء حظر' then
 Redis:srem(Fast..'BaN:In:Tuasl',Info_User)  
-return send(data.chat_id,data.id,Reply_Status(Info_User,'⦁ تم الغاء حظره من الصانع ').Reply,"md",true)  
+return send(data.chat_id,data.id,Reply_Status(Info_User,'◍ تم الغاء حظره من الصانع ').Reply,"md",true)  
 end 
 end
 end
-if text == "⦁ الغاء الامر" then
+if text == "◍ الغاء الامر" then
 Redis:del(Fast..data.sender_id.user_id.."bottoken")
 Redis:del(Fast..data.sender_id.user_id.."botuser")
 Redis:del(Fast..data.sender_id.user_id.."dev:user")
@@ -226,20 +226,20 @@ Redis:del(Fast..data.sender_id.user_id.."ch:7oda")
 Redis:del(Fast..data.sender_id.user_id.."make:bot")
 Redis:del(Fast..data.sender_id.user_id.."gp:id")
 Redis:del(Fast..data.sender_id.user_id.."gp:user")
-return send(data.chat_id,data.id,"⦁ تم الغاء الامر بنجاح")
+return send(data.chat_id,data.id,"◍ تم الغاء الامر بنجاح")
 end
-if text == "⦁ رجوع" then
+if text == "◍ رجوع" then
 Redis:del(Fast..data.sender_id.user_id.."bottoken")
 Redis:del(Fast..data.sender_id.user_id.."botuser")
 Redis:del(Fast..data.sender_id.user_id.."jabwa:bot")
 reply_markup = bot.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = '✧ قسم الحماية',type = 'text'},{text = '⦁ قسم الاغاني',type = 'text'},
+{text = '◍ قسم الحماية',type = 'text'},{text = '◍ قسم الاغاني',type = 'text'},
 },
 }
 }
-send(data.chat_id,data.id,"⦁ الان اختار القسم مطوري ⚡ \n","md",true, false, false, true, reply_markup)
+send(data.chat_id,data.id,"◍ الان اختار القسم مطوري ◍ \n","md",true, false, false, true, reply_markup)
 return false 
 end
 if text == "/start" then
@@ -249,56 +249,56 @@ Redis:del(Fast..data.sender_id.user_id.."make:bot")
 reply_markup = bot.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = '⦁ صنع بوت',type = 'text'},{text = '⦁ حذف بوت',type = 'text'},
+{text = '◍ صنع بوت',type = 'text'},{text = '◍ حذف بوت',type = 'text'},
 },
 {
-{text = '⦁ تفعيل الاشتراك الاجباري',type = 'text'},{text = '⦁ تعطيل الاشتراك الاجباري',type = 'text'},
+{text = '◍ تفعيل الاشتراك الاجباري',type = 'text'},{text = '◍ تعطيل الاشتراك الاجباري',type = 'text'},
 },
 {
-{text = '⦁ تفعيل الوضع المجاني',type = 'text'},{text = '⦁ تعطيل الوضع المجاني',type = 'text'},
+{text = '◍ تفعيل الوضع المجاني',type = 'text'},{text = '◍ تعطيل الوضع المجاني',type = 'text'},
 },
 {
-{text = "⦁ عدد البوتات",type = "text"},
+{text = "◍ عدد البوتات",type = "text"},
 },
 {
-{text = '⦁ الاحصائيات',type = 'text'},{text = '⦁ الاسكرينات المفتوحه',type = 'text'},
+{text = '◍ الاحصائيات',type = 'text'},{text = '◍ الاسكرينات المفتوحه',type = 'text'},
 },
 {
-{text = '⦁ تفعيل التواصل',type = 'text'},{text = '⦁ تعطيل التواصل',type = 'text'},
+{text = '◍ تفعيل التواصل',type = 'text'},{text = '◍ تعطيل التواصل',type = 'text'},
 },
 {
-{text = '⦁ اذاعه',type = 'text'},{text = '⦁ اذاعه بالتوجيه',type = 'text'},
+{text = '◍ اذاعه',type = 'text'},{text = '◍ اذاعه بالتوجيه',type = 'text'},
 },
 {
-{text = 'اعاده التشغيل ⦁',type = 'text'},
+{text = 'اعاده التشغيل ◍',type = 'text'},
 },
 {
-{text = '⦁ الغاء الامر',type = 'text'},{text = '⦁ رجوع',type = 'text'},
+{text = '◍ الغاء الامر',type = 'text'},{text = '◍ رجوع',type = 'text'},
 },
 }
 }
-send(data.chat_id,data.id,"⦁ اهلا بك عزيزي المطور الاساسي \n","md",true, false, false, true, reply_markup)
+send(data.chat_id,data.id,"◍ اهلا بك عزيزي المطور الاساسي \n","md",true, false, false, true, reply_markup)
 return false 
 end
 ---
 if text and text:match("^رفع مطور (%d+)$") then
 Redis:sadd(Fast.."Dev",text:match("^رفع مطور (%d+)$"))
-send(data.chat_id,data.id,'⦁ تم رفع العضو مطور ف الصانع بنجاح ',"md",true)  
+send(data.chat_id,data.id,'◍ تم رفع العضو مطور ف الصانع بنجاح ',"md",true)  
 return false 
 end
 if text and text:match("^تنزيل مطور (%d+)$") then
 Redis:srem(Fast.."Dev",text:match("^تنزيل مطور (%d+)$"))
-send(data.chat_id,data.id,'⦁ تم تنزيل العضو مطور من الصانع بنجاح ',"md",true)  
+send(data.chat_id,data.id,'◍ تم تنزيل العضو مطور من الصانع بنجاح ',"md",true)  
 return false 
 end
 
-if text == "⦁ تفعيل الوضع المجاني" then 
+if text == "◍ تفعيل الوضع المجاني" then 
 Redis:del(Fast.."free:bot")
-send(data.chat_id,data.id,'⦁ تم تفعيل الوضع المجاني ',"md",true)  
+send(data.chat_id,data.id,'◍ تم تفعيل الوضع المجاني ',"md",true)  
 end
-if text == "⦁ تعطيل الوضع المجاني" then 
+if text == "◍ تعطيل الوضع المجاني" then 
 Redis:set(Fast.."free:bot",true)
-send(data.chat_id,data.id,'⦁ تم تعطيل الوضع المجاني ',"md",true)  
+send(data.chat_id,data.id,'◍ تم تعطيل الوضع المجاني ',"md",true)  
 end
 -----تشغيل البوتات ---
 
@@ -309,28 +309,28 @@ local m = https.request("http://api.telegram.org/bot"..Token.."/getchat?chat_id=
 da = json:decode(m)
 if da.result.invite_link then
 local ch = da.result.id
-send(data.chat_id,data.id,'⦁ تم حفظ القناه ',"md",true)  
+send(data.chat_id,data.id,'◍ تم حفظ القناه ',"md",true)  
 Redis:del(Fast.."chfalse")
 Redis:set(Fast.."chfalse",ch)
 Redis:del(Fast.."ch:admin")
 Redis:set(Fast.."ch:admin",da.result.invite_link)
 else
-send(data.chat_id,data.id,'⦁ المعرف خطأ او البوت ليس مشرف في القناه ',"md",true)  
+send(data.chat_id,data.id,'◍ المعرف خطأ او البوت ليس مشرف في القناه ',"md",true)  
 end
 end
-if text == "⦁ تفعيل الاشتراك الاجباري" then
+if text == "◍ تفعيل الاشتراك الاجباري" then
 Redis:set(Fast.."ch:addd"..data.sender_id.user_id,"on")
-send(data.chat_id,data.id,'⦁ ارسل الان معرف القناه ',"md",true)  
+send(data.chat_id,data.id,'◍ ارسل الان معرف القناه ',"md",true)  
 end
-if text == "⦁ تعطيل الاشتراك الاجباري" then
+if text == "◍ تعطيل الاشتراك الاجباري" then
 Redis:del(Fast.."ch:admin")
 Redis:del(Fast.."chfalse")
-send(data.chat_id,data.id,'⦁ تم حذف القناه ',"md",true)  
+send(data.chat_id,data.id,'◍ تم حذف القناه ',"md",true)  
 end
 
 if text and text:match("mongodb") and Redis:get(Fast..data.sender_id.user_id.."gp:id") then
 Redis:set(Fast..data.sender_id.user_id.."mongoDB",text)
-send(data.chat_id,data.id,"⦁ تم حفظ الرابط بنجاح")
+send(data.chat_id,data.id,"◍ تم حفظ الرابط بنجاح")
 ---------------------
 end
 
@@ -356,7 +356,7 @@ local env = io.open("./source/.env", 'w')
 env:write("API_ID = "..app_id.."\nAPI_HASH = "..api_hash.."\nBOT_TOKEN = "..token.."\nMONGO_DB_URI = mongodb+srv://RTRT:RTRT@cluster0.mb9liv5.mongodb.net/?retryWrites=true&w=majority\nLOG_GROUP_ID = "..gp_id.."\nMUSIC_BOT_NAME = "..userbot.."\nSTRING_SESSION = "..session.."\nOWNER_ID = "..dev_id.."")
 env:close()
 sleep(3)
-send(data.chat_id,0,"⦁ تم حفظ بيانات البوت جاري التشغيل يرجي الانتظار ...","md",true)  
+send(data.chat_id,0,"◍ تم حفظ بيانات البوت جاري التشغيل يرجي الانتظار ...","md",true)  
 --------------------------------
 os.execute('cp -a ./source/. ./'..userbot..' && cd '..userbot..' &&chmod +x * && screen -d -m -S '..userbot..' python3.8 -m YukkiMusic')
 sleep(3)
@@ -376,10 +376,10 @@ Redis:del(Fast..data.sender_id.user_id.."gp:user")
 Redis:del(Fast..data.sender_id.user_id.."mongoDB")
 -----------------------------
 Redis:sadd(Fast..'bots',"@"..userbot.." » @"..dev_user)
-send(data.chat_id,data.id,"⦁ تم تشغيل البوت بنجاح \n⦁ في حاله لم يعمل البوت هذا يعني وجود خطأ في احدى البيانات اللتي ارسلتها","md",true)  
-return send(data.chat_id,data.id,"⦁ تم حفظ جروب الدعم بنجاح \n⦁ جاري التشغيل","md",true)  
+send(data.chat_id,data.id,"◍ تم تشغيل البوت بنجاح \n◍ في حاله لم يعمل البوت هذا يعني وجود خطأ في احدى البيانات اللتي ارسلتها","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ جروب الدعم بنجاح \n◍ جاري التشغيل","md",true)  
 else
-return send(data.chat_id,data.id,"⦁ المعرف ليس لمجموعه خارقه تأكد منه")
+return send(data.chat_id,data.id,"◍ المعرف ليس لمجموعه خارقه تأكد منه")
 end
 end
 
@@ -387,33 +387,33 @@ if text and Redis:get(Fast..data.sender_id.user_id.."helper") then
 local UserName = text:match("^@(.*)$")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."ch:7oda",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ قناه الاشتراك الاجباري \n⦁ ارسل الان معرف جروب الدعم\nوتأكد ان البوت مشرف بالجروب !","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ قناه الاشتراك الاجباري \n◍ ارسل الان معرف جروب الدعم\nوتأكد ان البوت مشرف بالجروب !","md",true)  
 end
 end
 if text and text:match("^(%d+)$") and Redis:get(Fast..data.sender_id.user_id.."session") then
 Redis:set(Fast..data.sender_id.user_id.."helper",text)
-return send(data.chat_id,data.id,"⦁ تم حفظ ايدي الحساب المساعد \n⦁ ارسل الان معرف قناه الاشتراك الاجباري وتأكد ان البوت مشرف بالقناه حتى يعمل بشكل صحيح","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ ايدي الحساب المساعد \n◍ ارسل الان معرف قناه الاشتراك الاجباري وتأكد ان البوت مشرف بالقناه حتى يعمل بشكل صحيح","md",true)  
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."api:hash") then
 Redis:set(Fast..data.sender_id.user_id.."session",text)
-return send(data.chat_id,data.id,"⦁ تم حفظ جلسه البايروجرام \n⦁ ارسل الان ايدي الحساب المساعد","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ جلسه البايروجرام \n◍ ارسل الان ايدي الحساب المساعد","md",true)  
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."app:id") then
 local UserName = text:match("(.*)")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."api:hash",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ Api_hash \n⦁ ارسل الان ال جلسه البايروجرام \n⦁ احصل عليه من هنا @s_stbot")  
+return send(data.chat_id,data.id,"◍ تم حفظ Api_hash \n◍ ارسل الان ال جلسه البايروجرام \n◍ احصل عليه من هنا @SessionStringGeneratorZBot")  
 else
-send(data.chat_id,data.id,"⦁ تأكد من App_id  ! ")  
+send(data.chat_id,data.id,"◍ تأكد من App_id  ! ")  
 end
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."dev:user") then
 local UserName = text:match("(%d+)")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."app:id",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ App_id \n⦁ ارسل الان ال Api_hash \n⦁ احصل عليه من هنا https://my.telegram.org")  
+return send(data.chat_id,data.id,"◍ تم حفظ App_id \n◍ ارسل الان ال Api_hash \n◍ احصل عليه من هنا https://my.telegram.org")  
 else
-send(data.chat_id,data.id,"⦁ تأكد من App_id  ! ")  
+send(data.chat_id,data.id,"◍ تأكد من App_id  ! ")  
 end
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."make:bot") == "devuser" then
@@ -421,23 +421,23 @@ local UserName = text:match("^@(.*)$")
 if UserName then
 local UserId_Info = bot.searchPublicChat(UserName)
 if not UserId_Info.id then
-send(data.chat_id,data.id,"⦁ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
 return false
 end
 if UserId_Info.type.is_channel == true then
-send(data.chat_id,data.id,"⦁ اليوزر لقناه او مجموعه تأكد منه","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر لقناه او مجموعه تأكد منه","md",true)  
 return false
 end
 if UserName and UserName:match('(%S+)[Bb][Oo][Tt]') then
-send(data.chat_id,data.id,"⦁ عذرا يجب ان تستخدم معرف لحساب شخصي فقط ","md",true)  
+send(data.chat_id,data.id,"◍ عذرا يجب ان تستخدم معرف لحساب شخصي فقط ","md",true)  
 return false
 end
 
 Redis:set(Fast..data.sender_id.user_id.."dev:user",UserName)
 Redis:set(Fast..data.sender_id.user_id.."dev:id",UserId_Info.id)
-return send(data.chat_id,data.id,"⦁ تم حفظ المطور الاساسي \n⦁ ارسل الان ال App_id \n⦁ احصل عليه من هنا https://my.telegram.org")  
+return send(data.chat_id,data.id,"◍ تم حفظ المطور الاساسي \n◍ ارسل الان ال App_id \n◍ احصل عليه من هنا https://my.telegram.org")  
 else
-send(data.chat_id,data.id,"⦁ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
 end
 end
 
@@ -448,31 +448,31 @@ local json = JSON.decode(url)
 if json.ok == true then
 local botuser = json.result.username
 if Redis:sismember(Fast.."userbots",botuser) then
-send(data.chat_id,data.id, "\n⦁ عذرا هذا البوت مصنوع بالفعل","md",true)  
+send(data.chat_id,data.id, "\n◍ عذرا هذا البوت مصنوع بالفعل","md",true)  
 return false 
 end 
 Redis:set(Fast..data.sender_id.user_id.."botuser",botuser)
 Redis:set(Fast..data.sender_id.user_id.."bottoken",text)
 Redis:set(Fast..data.sender_id.user_id.."make:bot","devuser")
-send(data.chat_id,data.id, "\n⦁ ارسل الان معرف المطور الاساسي ")
+send(data.chat_id,data.id, "\n◍ ارسل الان معرف المطور الاساسي ")
 return false 
 end
-send(data.chat_id,data.id, "\n⦁ التوكن الذي ارسلته غير صحيح ")
+send(data.chat_id,data.id, "\n◍ التوكن الذي ارسلته غير صحيح ")
 return false
 end
-send(data.chat_id,data.id, "\n⦁ من فضلك ارسل التوكن بشكل صحيح ")
+send(data.chat_id,data.id, "\n◍ من فضلك ارسل التوكن بشكل صحيح ")
 end
-if text == "⦁ صنع بوت" then
+if text == "◍ صنع بوت" then
 Redis:set(Fast..data.sender_id.user_id.."make:bot","token")
-send(data.chat_id,data.id, "\n⦁ ارسل توكن البوت الان","md",true)  
+send(data.chat_id,data.id, "\n◍ ارسل توكن البوت الان","md",true)  
 return false 
 end 
 ----------end making
-if text == "⦁ عدد البوتات" or text == "✧ عدد بوتات الميوزك" then
+if text == "◍ عدد البوتات" or text == "◍ عدد بوتات الميوزك" then
 local list = Redis:smembers(Fast..'bots')
 if #list > 0 then
-txx = "\n⦁ قائمه البوتات المصنوعه ↑↓\n"
-jabwa = "⦁ وعددهم ->『 "..#list.." 』"
+txx = "\n◍ قائمه البوتات المصنوعه ↑↓\n"
+jabwa = "◍ وعددهم ->『 "..#list.." 』"
 for k,v in pairs(list) do
 txx = txx..' '..k..' -> '..v..'\n'
 end
@@ -482,9 +482,9 @@ end
 send(msg.chat_id,msg.id,txx..jabwa)
 end
 -------screen -ls
-if text == "⦁ الاسكرينات المفتوحه" then  
+if text == "◍ الاسكرينات المفتوحه" then  
 rqm = 0
-local message = ' ⦁ السكرينات الموجوده بالسيرفر \n\n'
+local message = ' ◍ السكرينات الموجوده بالسيرفر \n\n'
 for screnName in io.popen('ls /var/run/screen/S-root'):lines() do
 rqm = rqm + 1
 message = message..rqm..'-  { `'..screnName..' `}\n'
@@ -495,9 +495,9 @@ end
 
 -------delete 
 if text and Redis:get(Fast..data.sender_id.user_id.."make:bot") == "del" then
-if text == "الغاء" or text == '⦁ الغاء الامر' then   
+if text == "الغاء" or text == '◍ الغاء الامر' then   
 Redis:del(Fast..data.sender_id.user_id.."make:bot")
-send(data.chat_id,data.id, "\n⦁ تم الغاء حذف البوت","md",true)  
+send(data.chat_id,data.id, "\n◍ تم الغاء حذف البوت","md",true)  
 return false 
 end 
 local list = Redis:smembers(Fast..'bots')
@@ -510,36 +510,36 @@ end
 end
 os.execute("sudo rm -fr "..text:gsub("@",""))
 os.execute("screen -X -S "..text:gsub("@","").." quit")
-send(data.chat_id,data.id, "\n⦁ تم حذف البوت بنجاح","md",true)  
+send(data.chat_id,data.id, "\n◍ تم حذف البوت بنجاح","md",true)  
 return false 
 end 
-if text == "⦁ حذف بوت" then
+if text == "◍ حذف بوت" then
 Redis:set(Fast..data.sender_id.user_id.."make:bot","del")
-send(data.chat_id,data.id, "\n⦁ ارسل معرف البوت الان","md",true)  
+send(data.chat_id,data.id, "\n◍ ارسل معرف البوت الان","md",true)  
 return false 
 end 
 ----end deleting 
 -----states
-if text == "⦁ تفعيل التواصل" then
+if text == "◍ تفعيل التواصل" then
 Redis:del(Fast.."twsl")
-send(data.chat_id,data.id,"⦁ تم تفعيل التواصل")
+send(data.chat_id,data.id,"◍ تم تفعيل التواصل")
 return false 
 end
-if text == "⦁ تعطيل التواصل" then
+if text == "◍ تعطيل التواصل" then
 Redis:set(Fast.."twsl",true)
-send(data.chat_id,data.id,"⦁ تم تعطيل التواصل")
+send(data.chat_id,data.id,"◍ تم تعطيل التواصل")
 return false 
 end
-if text == "⦁ الاحصائيات" then
+if text == "◍ الاحصائيات" then
 local list = Redis:smembers(Fast.."total")
-send(data.chat_id,data.id,"⦁ عدد مشتركين بوتك "..#list.." مشترك")
+send(data.chat_id,data.id,"◍ عدد مشتركين بوتك "..#list.." مشترك")
 return false 
 end
 --brodcast
 if Redis:get(Fast..data.sender_id.user_id.."brodcast") then 
-if text == "الغاء" or text == '⦁ الغاء الامر' then   
+if text == "الغاء" or text == '◍ الغاء الامر' then   
 Redis:del(Fast..data.sender_id.user_id.."brodcast") 
-send(data.chat_id,data.id, "\n⦁ تم الغاء الاذاعه","md",true)  
+send(data.chat_id,data.id, "\n◍ تم الغاء الاذاعه","md",true)  
 return false 
 end 
 local list = Redis:smembers(Fast.."total") 
@@ -587,25 +587,25 @@ for k,v in pairs(list) do
 send(v,0,text,"md",true)  
 end
 end
-send(data.chat_id,data.id,"⦁ تمت الاذاعه الى *- "..#list.." * عضو في البوت ","md",true)      
+send(data.chat_id,data.id,"◍ تمت الاذاعه الى *- "..#list.." * عضو في البوت ","md",true)      
 Redis:del(Fast..data.sender_id.user_id.."brodcast") 
 return false
 end
-if text == "⦁ اذاعه" then
+if text == "◍ اذاعه" then
 Redis:set(Fast..data.sender_id.user_id.."brodcast",true)
-send(data.chat_id,data.id,"⦁ ارسل الاذاعه الان")
+send(data.chat_id,data.id,"◍ ارسل الاذاعه الان")
 return false 
 end
 ---fwd
 if Redis:get(Fast..data.sender_id.user_id.."brodcast:fwd") then 
-if text == "الغاء" or text == '⦁ الغاء الامر' then   
+if text == "الغاء" or text == '◍ الغاء الامر' then   
 Redis:del(Fast..data.sender_id.user_id.."brodcast:fwd")
-send(data.chat_id,data.id, "\n⦁ تم الغاء الاذاعه بالتوجيه","md",true)    
+send(data.chat_id,data.id, "\n◍ تم الغاء الاذاعه بالتوجيه","md",true)    
 return false 
 end 
 if data.forward_info then 
 local list = Redis:smembers(Fast.."total") 
-send(data.chat_id,data.id,"⦁ تم التوجيه الى *- "..#list.." * مشترك ف البوت ","md",true)      
+send(data.chat_id,data.id,"◍ تم التوجيه الى *- "..#list.." * مشترك ف البوت ","md",true)      
 for k,v in pairs(list) do  
 bot.forwardMessages(v, data.chat_id, data.id,0,0,true,false,false)
 end   
@@ -613,9 +613,9 @@ Redis:del(Fast..data.sender_id.user_id.."brodcast:fwd")
 end 
 return false
 end
-if text == "⦁ اذاعه بالتوجيه" then
+if text == "◍ اذاعه بالتوجيه" then
 Redis:set(Fast..data.sender_id.user_id.."brodcast:fwd",true)
-send(data.chat_id,data.id,"⦁ ارسل التوجيه الان")
+send(data.chat_id,data.id,"◍ ارسل التوجيه الان")
 return false 
 end
 
@@ -625,7 +625,7 @@ end -- sudo cmd
 if not Dev(data) then
 if text and ChannelJoin(data.sender_id.user_id) == false then
 chinfo = Redis:get(Fast.."ch:admin")
-send(data.chat_id,data.id,'\n⦁ عليك الاشتراك في قناة البوت لاستخذام الاوامر\n\n'..chinfo..'')
+send(data.chat_id,data.id,'\n◍ عليك الاشتراك في قناة البوت لاستخذام الاوامر\n\n'..chinfo..'')
 return false 
 end
 if not Redis:get(Fast.."twsl") then
@@ -645,7 +645,7 @@ end
 if text and Redis:get(Fast.."free:bot") then
 return send(data.chat_id,data.id," ")
 end
-if text == "⦁ الغاء" then
+if text == "◍ الغاء" then
 Redis:del(Fast..data.sender_id.user_id.."bottoken")
 Redis:del(Fast..data.sender_id.user_id.."dev:user")
 Redis:del(Fast..data.sender_id.user_id.."dev:id")
@@ -658,7 +658,7 @@ Redis:del(Fast..data.sender_id.user_id.."make:bot")
 Redis:del(Fast..data.sender_id.user_id.."gp:id")
 Redis:del(Fast..data.sender_id.user_id.."gp:user")
 Redis:del(Fast..data.sender_id.user_id.."mongoDB")
-send(data.chat_id,data.id, "\n⦁ تم الغاء الامر بنجاح ")
+send(data.chat_id,data.id, "\n◍ تم الغاء الامر بنجاح ")
 end
 if text == "/start" then
 if not Redis:sismember(Fast.."total",data.sender_id.user_id) then
@@ -679,20 +679,14 @@ Redis:del(Fast..data.sender_id.user_id.."mongoDB")
 reply_markup = bot.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = '⦁ صنع بوت',type = 'text'},{text = '⦁ حذف البوت',type = 'text'},
+{text = '◍ صنع بوت',type = 'text'},{text = '◍ حذف البوت',type = 'text'},
 },
 {
-{text = '⦁ مبرمج السورس',type = 'text'},{text = '⦁ سورس',type = 'text'},
-},
-{
-{text = '⦁ طريقة صنع بوت',type = 'text'},
-},
-{
-{text = '⦁ الغاء',type = 'text'},
+{text = '◍ الغاء',type = 'text'},
 },
 }
 }
-send(msg.chat_id,msg.id,"*⚡مرحبا اليك قسم صانع الميوزك 🚀\n\n  ⚡قناة التحديثات (@SSSSMY) 🚀\n\n⚡ المطور ابو مازن (@CU_C1) 🚀\n\n ⚡ المطور احمد (@AM_RKY) 🚀*","md",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"*◍مرحبا اليك قسم صانع الميوزك ◍\n\n  ◍قناة التحديثات (@Y_H_U_3) ◍\n\n◍ المطور افيونا (@Y_H_U_1) ◍\n\n ◍ لتنصيب حمايه (@Y_H_U_1BOT)*","md",true, false, false, true, reply_markup)
 return false 
 end
 ---making user
@@ -718,7 +712,7 @@ local env = io.open("./source/.env", 'w')
 env:write("API_ID = "..app_id.."\nAPI_HASH = "..api_hash.."\nBOT_TOKEN = "..token.."\nMONGO_DB_URI = mongodb+srv://RTRT:RTRT@cluster0.mb9liv5.mongodb.net/?retryWrites=true&w=majority\nLOG_GROUP_ID = "..gp_id.."\nMUSIC_BOT_NAME = "..userbot.."\nSTRING_SESSION = "..session.."\nOWNER_ID = "..dev_id.."")
 env:close()
 sleep(3)
-send(data.chat_id,0,"⦁ تم حفظ بيانات البوت جاري التشغيل يرجي الانتظار ...","md",true)  
+send(data.chat_id,0,"◍ تم حفظ بيانات البوت جاري التشغيل يرجي الانتظار ...","md",true)  
 --------------------------------
 os.execute('cp -a ./source/. ./'..userbot..' && cd '..userbot..' &&chmod +x * && screen -d -m -S '..userbot..' python3.8 -m YukkiMusic')
 sleep(3)
@@ -737,10 +731,10 @@ Redis:del(Fast..data.sender_id.user_id.."gp:user")
 Redis:del(Fast..data.sender_id.user_id.."mongoDB")
 -----------------------------
 Redis:sadd(Fast..'bots',"@"..userbot.." » @"..dev_user)
-send(data.chat_id,data.id,"⦁ تم تشغيل البوت بنجاح \n⦁ في حاله لم يعمل البوت هذا يعني وجود خطأ في احدى البيانات اللتي ارسلتها","md",true)  
-return send(data.chat_id,data.id,"⦁ تم حفظ جروب الدعم بنجاح \n⦁ جاري التشغيل","md",true)  
+send(data.chat_id,data.id,"◍ تم تشغيل البوت بنجاح \n◍ في حاله لم يعمل البوت هذا يعني وجود خطأ في احدى البيانات اللتي ارسلتها","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ جروب الدعم بنجاح \n◍ جاري التشغيل","md",true)  
 else
-return send(data.chat_id,data.id,"⦁ المعرف ليس لمجموعه خارقه تأكد منه")
+return send(data.chat_id,data.id,"◍ المعرف ليس لمجموعه خارقه تأكد منه")
 end
 end
 
@@ -748,33 +742,33 @@ if text and Redis:get(Fast..data.sender_id.user_id.."helper") then
 local UserName = text:match("^@(.*)$")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."ch:7oda",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ قناه الاشتراك الاجباري \n⦁ ارسل الان معرف جروب الدعم\nوتأكد ان البوت مشرف بالجروب !","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ قناه الاشتراك الاجباري \n◍ ارسل الان معرف جروب الدعم\nوتأكد ان البوت مشرف بالجروب !","md",true)  
 end
 end
 if text and text:match("^(%d+)$") and Redis:get(Fast..data.sender_id.user_id.."session") then
 Redis:set(Fast..data.sender_id.user_id.."helper",text)
-return send(data.chat_id,data.id,"⦁ تم حفظ ايدي الحساب المساعد \n⦁ ارسل الان معرف قناه الاشتراك الاجباري وتأكد ان البوت مشرف بالقناه حتى يعمل بشكل صحيح","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ ايدي الحساب المساعد \n◍ ارسل الان معرف قناه الاشتراك الاجباري وتأكد ان البوت مشرف بالقناه حتى يعمل بشكل صحيح","md",true)  
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."api:hash") then
 Redis:set(Fast..data.sender_id.user_id.."session",text)
-return send(data.chat_id,data.id,"⦁ تم حفظ جلسه البايروجرام \n⦁ ارسل الان ايدي الحساب المساعد","md",true)  
+return send(data.chat_id,data.id,"◍ تم حفظ جلسه البايروجرام \n◍ ارسل الان ايدي الحساب المساعد","md",true)  
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."app:id") then
 local UserName = text:match("(.*)")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."api:hash",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ Api_hash \n⦁ ارسل الان ال جلسه البايروجرام \n⦁ احصل عليه من هنا @s_stbot")  
+return send(data.chat_id,data.id,"◍ تم حفظ Api_hash \n◍ ارسل الان ال جلسه البايروجرام \n◍ احصل عليه من هنا @SessionStringGeneratorZBot")  
 else
-send(data.chat_id,data.id,"⦁ تأكد من App_id  ! ")  
+send(data.chat_id,data.id,"◍ تأكد من App_id  ! ")  
 end
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."dev:user") then
 local UserName = text:match("(%d+)")
 if UserName then
 Redis:set(Fast..data.sender_id.user_id.."app:id",UserName)
-return send(data.chat_id,data.id,"⦁ تم حفظ App_id \n⦁ ارسل الان ال Api_hash \n⦁ احصل عليه من هنا https://my.telegram.org")  
+return send(data.chat_id,data.id,"◍ تم حفظ App_id \n◍ ارسل الان ال Api_hash \n◍ احصل عليه من هنا https://my.telegram.org")  
 else
-send(data.chat_id,data.id,"⦁ تأكد من App_id  ! ")  
+send(data.chat_id,data.id,"◍ تأكد من App_id  ! ")  
 end
 end
 if text and Redis:get(Fast..data.sender_id.user_id.."make:bot") == "devuser" then
@@ -782,23 +776,23 @@ local UserName = text:match("^@(.*)$")
 if UserName then
 local UserId_Info = bot.searchPublicChat(UserName)
 if not UserId_Info.id then
-send(data.chat_id,data.id,"⦁ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
 return false
 end
 if UserId_Info.type.is_channel == true then
-send(data.chat_id,data.id,"⦁ اليوزر لقناه او مجموعه تأكد منه","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر لقناه او مجموعه تأكد منه","md",true)  
 return false
 end
 if UserName and UserName:match('(%S+)[Bb][Oo][Tt]') then
-send(data.chat_id,data.id,"⦁ عذرا يجب ان تستخدم معرف لحساب شخصي فقط ","md",true)  
+send(data.chat_id,data.id,"◍ عذرا يجب ان تستخدم معرف لحساب شخصي فقط ","md",true)  
 return false
 end
 
 Redis:set(Fast..data.sender_id.user_id.."dev:user",UserName)
 Redis:set(Fast..data.sender_id.user_id.."dev:id",UserId_Info.id)
-return send(data.chat_id,data.id,"⦁ تم حفظ المطور الاساسي \n⦁ ارسل الان ال App_id \n⦁ احصل عليه من هنا https://my.telegram.org")  
+return send(data.chat_id,data.id,"◍ تم حفظ المطور الاساسي \n◍ ارسل الان ال App_id \n◍ احصل عليه من هنا https://my.telegram.org")  
 else
-send(data.chat_id,data.id,"⦁ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
+send(data.chat_id,data.id,"◍ اليوزر ليس لحساب شخصي تأكد منه ","md",true)  
 end
 end
 
@@ -809,27 +803,27 @@ local json = JSON.decode(url)
 if json.ok == true then
 local botuser = json.result.username
 if Redis:sismember(Fast.."userbots",botuser) then
-send(data.chat_id,data.id, "\n⦁ عذرا هذا البوت مصنوع بالفعل","md",true)  
+send(data.chat_id,data.id, "\n◍ عذرا هذا البوت مصنوع بالفعل","md",true)  
 return false 
 end 
 Redis:set(Fast..data.sender_id.user_id.."botuser",botuser)
 Redis:set(Fast..data.sender_id.user_id.."bottoken",text)
 Redis:set(Fast..data.sender_id.user_id.."make:bot","devuser")
-send(data.chat_id,data.id, "\n⦁ ارسل الان معرف المطور الاساسي ")
+send(data.chat_id,data.id, "\n◍ ارسل الان معرف المطور الاساسي ")
 return false 
 end
-send(data.chat_id,data.id, "\n⦁ التوكن الذي ارسلته غير صحيح ")
+send(data.chat_id,data.id, "\n◍ التوكن الذي ارسلته غير صحيح ")
 return false
 end
-send(data.chat_id,data.id, "\n⦁ من فضلك ارسل التوكن بشكل صحيح ")
+send(data.chat_id,data.id, "\n◍ من فضلك ارسل التوكن بشكل صحيح ")
 end
-if text == "⦁ صنع بوت" then
+if text == "◍ صنع بوت" then
 Redis:set(Fast..data.sender_id.user_id.."make:bot","token")
-send(data.chat_id,data.id, "\n⦁ ارسل توكن البوت الان","md",true)  
+send(data.chat_id,data.id, "\n◍ ارسل توكن البوت الان","md",true)  
 return false 
 end  
 ----end making user
-if text == "⦁ حذف البوت" then
+if text == "◍ حذف البوت" then
 if Redis:get(Fast..data.sender_id.user_id.."botuser") then
 local botuser = Redis:get(Fast..data.sender_id.user_id.."botuser")
 local dev_user = bot.getUser(data.sender_id.user_id).username or ""
@@ -845,9 +839,9 @@ end
 os.execute("sudo rm -fr "..botuser)
 os.execute("screen -X -S "..botuser.." quit")
 Redis:del(Fast..data.sender_id.user_id.."botuser")
-send(data.chat_id,data.id, "\n⦁ تم حذف البوت بنجاح","md",true)  
+send(data.chat_id,data.id, "\n◍ تم حذف البوت بنجاح/n√","md",true)  
 else
-send(data.chat_id,data.id, "\n⦁ عفوا لم تصنع اي بوت من قبل","md",true)  
+send(data.chat_id,data.id, "\n◍ عفوا لم تصنع اي بوت من قبل","md",true)  
 end
 end
 
